@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xsi:schemaLocation="http://www.alfresco.org/model/dictionary/1.0 modelSchema.xsd" -->
+<model name="sample:sampleModel" xmlns="http://www.alfresco.org/model/dictionary/1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<description>Sample Model</description>
+	<author>sgd</author>
+	<published>2012-01-24</published>
+	<version>1.0</version>
+
+	<imports>
+		<import uri="http://www.alfresco.org/model/dictionary/1.0"
+			prefix="d" />
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+	</imports>
+
+	<namespaces>
+		<namespace uri="http://www.alfresco.org/model/sample/1.0"
+			prefix="sample" />
+	</namespaces>
+
+	<constraints>
+		<constraint name="sample:parentConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>1 - VALUE A</value>
+					<value>2 - VALUE B</value>
+					<value>3 - VALUE C</value>
+				</list>
+			</parameter>
+		</constraint>
+		<constraint name="sample:constraintOne" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>1 - SUBVALUE ONE AX</value>
+					<value>1 - SUBVALUE ONE AY</value>
+					<value>1 - SUBVALUE ONE AZ</value>
+					<value>2 - SUBVALUE ONE BX</value>
+					<value>2 - SUBVALUE ONE BY</value>
+					<value>3 - SUBVALUE ONE CY</value>
+					<value>3 - SUBVALUE ONE CZ</value>
+				</list>
+			</parameter>
+		</constraint>
+		<constraint name="sample:constraintTwo" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>1.2.3 - SUBVALUE TWO ABCX</value>
+					<value>2.3 - SUBVALUE TWO BCX</value>
+					<value>2.3 - SUBVALUE TWO BCY</value>
+					<value>2.3 - SUBVALUE TWO BCZ</value>
+					<value>3 - SUBVALUE TWO CX</value>
+					<value>3 - SUBVALUE TWO CY</value>
+					<value>3 - SUBVALUE TWO CZ</value>
+				</list>
+			</parameter>
+		</constraint>
+
+		<constraint name="sample:areaConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>0!0</value>
+					<value>1!1</value>
+					<value>2!2</value>
+					<value>3!3</value>
+					<value>4!4</value>
+					<value>5!5</value>
+					<value>6!6</value>
+					<value>9!9</value>
+				</list>
+			</parameter>
+		</constraint>
+		
+		
+		<constraint name="sample:subAreaConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>0!A1</value>
+					<value>0!A2</value>
+					<value>0!A3</value>
+					<value>0!A4</value>
+					<value>0!A5</value>
+					<value>0!A6</value>
+					<value>0!A7</value>
+					<value>0!A9</value>
+					
+					<value>1!B1</value>
+					<value>1!B2</value>
+					<value>1!B3</value>
+					
+					<value>2!C1</value>
+					<value>2!C2</value>
+					<value>2!C3</value>
+					<value>2!C4</value>
+					
+					<value>3!D1</value>
+					<value>3!D2</value>
+					
+					
+					<value>4!E1</value>
+					<value>4!E2</value>
+					
+					<value>5!F1</value>
+					
+					<value>6!G1</value>
+					<value>6!G2</value>
+					<value>6!G3</value>
+					
+					<value>9!H1</value>
+					<value>9!H2</value>
+					<value>9!H3</value>
+					<value>9!H4</value>
+					<value>9!H5</value>
+					
+				</list>
+			</parameter>
+		</constraint>
+
+
+         <constraint name="sample:grupoConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>B1!A11</value>
+					<value>B1!A12</value>
+					<value>B1!A13</value>
+					<value>B1!A14</value>
+					<!--
+					<value>14!14</value>
+					<value>15!15</value>
+					<value>16!16</value>
+					<value>17!17</value>
+					<value>18!18</value>
+					
+					<value>19!19</value>
+					<value>20!20</value>
+					<value>21!21</value>
+					<value>22!22</value>
+					<value>23!23</value>
+					<value>24!24</value>
+					<value>25!25</value>
+					<value>26!26</value>
+				
+					<value>27!27</value>
+					<value>28!28</value>
+					<value>29!29</value>
+					<value>30!30</value>
+					<value>31!31</value>
+					<value>32!32</value>
+					<value>33!33</value>
+										
+					<value>34!34</value>
+					<value>35!35</value>
+					<value>36!36</value>
+					<value>37!37</value>
+					<value>38!38</value>
+					<value>39!39</value>
+					<value>40!40</value>
+			
+					<value>41!41</value>
+					<value>42!42</value>
+					<value>43!43</value>
+					<value>44!44</value>
+					<value>45!45</value>
+					
+					<value>46!46</value>
+					<value>47!47</value>
+					<value>48!48</value>
+					<value>49!49</value>
+					<value>50!50</value>
+					
+					<value>51!51</value>
+					<value>52!52</value>
+					<value>53!53</value>
+					<value>54!54</value>
+					<value>55!55</value>
+					
+					
+					<value>56!56</value>
+					<value>57!57</value>
+					<value>58!58</value>
+					<value>59!59</value>
+					<value>60!60</value>
+					<value>61!61</value>
+					
+					<value>62!62</value>
+					<value>63!63</value>
+					<value>64!64</value>
+					<value>65!65</value>
+					<value>66!66</value>
+					<value>67!67</value>
+										
+					<value>68!68</value>
+					<value>69!69</value>
+					<value>70!70</value>
+					<value>71!71</value>
+					<value>72!72</value>
+					<value>73!73</value>
+					
+					<value>74!74</value>
+					<value>75!75</value>
+					<value>76!76</value>
+					<value>77!77</value>
+					<value>78!78</value>
+					<value>79!79</value>
+					
+					
+					<value>80!80</value>
+					<value>81!81</value>
+					<value>82!82</value>
+					<value>83!83</value>
+					<value>84!84</value>
+					<value>85!85</value>
+					
+					<value>86!86</value>
+					<value>87!87</value>
+					<value>88!88</value>
+					<value>89!89</value>
+					<value>90!90</value>
+				-->
+					
+				</list>
+			</parameter>
+		</constraint>
+		
+		
+		<constraint name="sample:subGrupoConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value>asss</value>
+					<!-- <value>14!A11</value>
+					<value>14!A12</value>
+					<value>14!A13</value>
+					
+					<value>15!B11</value>
+					<value>15!B12</value>
+					<value>15!B13</value>
+					
+					<value>16!C11</value>
+					<value>16!C12</value>
+					<value>16!C13</value>
+					
+					<value>17!D11</value>
+					<value>17!D12</value>
+					<value>17!D13</value>
+					
+					<value>18!E11</value>
+					<value>18!E12</value>
+					<value>18!E13</value>
+					
+					<value>19!F11</value>
+					<value>19!F12</value>
+					<value>19!F13</value>
+					-->
+				</list>
+			</parameter>
+		</constraint>
+		
+
+		<constraint name="sample:unidadeConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>100!100</value>
+					<value>101!101</value>
+					<value>102!102</value>
+					<value>103!103</value>
+					<value>104!104</value>
+					<value>105!105</value>
+					<value>106!106</value>
+					<value>107!107</value>
+					<value>108!108</value>
+					<value>109!109</value>
+					<value>110!110</value>
+					<value>111!111</value>
+					<value>112!112</value>
+					<value>113!113</value>
+					<value>114!114</value>
+					<value>115!115</value>
+					<value>116!116</value>
+					<value>117!117</value>
+					<value>118!118</value>
+				</list>
+			</parameter>
+		</constraint>
+
+         <constraint name="sample:especieConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>Acta </value>
+					<value>Artigo </value>
+					<value>Certidão ou certificado </value>
+					<value>Circular</value>
+					<value>Comunicado </value>
+					<value>Convite </value>
+					<value>Declaração </value>
+					<value>Despacho </value>
+					<value>Edital </value>
+					<value>Estratégia </value>
+					<value>Folheto </value>
+					<value>Guia de remessa </value>
+					<value>Informação </value>
+					<value>Informação/Proposta </value>
+					<value>Instrução </value>
+					<value>Livro </value>
+					<value>Legislação </value>
+					<value>Memorando</value>
+					<value>Norma </value>
+					<value>Nota </value>
+					<value>Oficio </value>
+					<value>Ordem de missão </value>
+					<value>Ordem de serviço </value>
+					<value>Parecer </value>
+					<value>Requerimento </value>
+					<value>Relatório  </value>
+					<value>Panfleto   </value>
+					<value>Plano   </value>
+					<value>Política   </value>
+					<value>Procedimento   </value>
+					<value>Síntese   </value>
+					
+					
+				</list>
+			</parameter>
+		</constraint>
+
+		<constraint name="sample:divisaoConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value></value>
+					<value>101!A100</value>
+					<value>101!A101</value>
+					<value>101!A102</value>
+					<value>101!A103</value>
+
+					<value>102!B100</value>
+					<value>102!B101</value>
+					<value>102!B102</value>
+
+					<value>103!C100</value>
+					<value>103!C101</value>
+					<value>103!C102</value>
+
+					<value>104!D100</value>
+					<value>104!D101</value>
+
+					<value>105!E100</value>
+					<value>105!E101</value>
+
+					<value>107!G100</value>
+					<value>107!G101</value>
+
+					<value>108!H100</value>
+					<value>108!H101</value>
+
+					<value>109!I100</value>
+					<value>109!I101</value>
+
+					<value>110!J100</value>
+					<value>110!J101</value>
+
+					<value>111!K100</value>
+					<value>111!K101</value>
+					<value>111!K102</value>
+
+					<value>112!L100</value>
+					<value>112!L101</value>
+					<value>112!L102</value>
+					<value>112!L103</value>
+					<value>112!L104</value>
+					<value>112!L105</value>
+					<value>112!L106</value>
+					<value>112!L107</value>
+					<value>112!L108</value>
+					<value>112!L109</value>
+					<value>112!L110</value>
+					<value>112!L111</value>
+					<value>112!L112</value>
+					<value>112!L113</value>
+					<value>112!L114</value>
+					<value>112!L115</value>
+
+					<value>113!M100</value>
+					<value>113!M101</value>
+					<value>113!M102</value>
+					<value>113!M103</value>
+					<value>113!M104</value>
+					<value>113!M105</value>
+					<value>113!M106</value>
+					<value>113!M107</value>
+					<value>113!M108</value>
+					<value>113!M109</value>
+				</list>
+			</parameter>
+		</constraint>
+
+
+
+
+
+	</constraints>
+	<types>
+		<type name="sample:sampleType">
+			<title>Sample Type</title>
+			<parent>cm:content</parent>
+			<properties>
+				<property name="sample:mainProperty">
+					<title>Main Property</title>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<constraints>
+						<constraint ref="sample:parentConstraint" />
+					</constraints>
+				</property>
+				<property name="sample:propertyOne">
+					<title>Property One</title>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<constraints>
+						<constraint ref="sample:constraintOne" />
+					</constraints>
+				</property>
+				<property name="sample:propertyTwo">
+					<title>Property Two</title>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<constraints>
+						<constraint ref="sample:constraintTwo" />
+					</constraints>
+				</property>
+				<property name="sample:propertyThree">
+					<title>Property Three</title>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="sample:areaProperty">
+					<title>Classe</title>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<constraints>
+						<constraint ref="sample:areaConstraint" />
+					</constraints>
+				</property>
+				<property name="sample:subAreaProperty">
+					<title>Sub Classe</title>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<constraints>
+						<constraint ref="sample:subAreaConstraint" />
+					</constraints>
+				</property>
+
+				
+				<property name="sample:grupoProperty">
+					<title>Grupo</title>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<constraints>
+						<constraint ref="sample:grupoConstraint" />
+					</constraints>
+				</property>
+				<property name="sample:subGrupoProperty">
+					<title>Sub Grupo</title>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<constraints>
+						<constraint ref="sample:subGrupoConstraint" />
+					</constraints>
+				</property>
+
+
+				<property name="sample:unidadeProperty">
+					<title>Unidade Organica</title>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<constraints>
+						<constraint ref="sample:unidadeConstraint" />
+					</constraints>
+				</property>
+				<property name="sample:divisaoProperty">
+					<title>Divisão</title>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<constraints>
+						<constraint ref="sample:divisaoConstraint" />
+					</constraints>
+				</property>
+
+
+				<property name="sample:especieDocumental">
+					<title>Especie Documental</title>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<constraints>
+						<constraint ref="sample:especieConstraint" />
+					</constraints>
+				</property>
+				<property name="sample:numeroOrdem">
+                    <title>Numero de Ordem</title>
+                    <type>d:int</type>
+                    <mandatory>true</mandatory>
+                </property>
+			</properties>
+		</type>
+	</types>
+</model>
